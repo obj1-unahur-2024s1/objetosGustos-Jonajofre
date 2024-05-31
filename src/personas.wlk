@@ -7,29 +7,16 @@ object rosa{
 }
 
 object estefania{
-	method leGusta(objeto){
-		return ((objeto.color() == "rojo") or (objeto.color() == "verde")) 
+	method leGusta(objeto)= objeto.color().esFuerte() 
 	}
-}
 
 object luisa{
-	method leGusta(objeto){
-		return ((objeto.material() == "cobre") or (objeto.material() == "vidrio"))
-	}
+	method leGusta(objeto) = objeto.material().brilla()
 }
 
 object juan{
 	method leGusta(objeto){
-		return (((objeto.color() == "celeste") or (objeto.color() == "pardo")) or ( objeto.peso()>=1200 and objeto.peso() <= 1800) )
+		return !objeto.color().esFuerte() or objeto.peso()>=1200 and objeto.peso() <= 1800 
 	}
 }
 
-/*object color{
-	var color = ""
-	method esFuerte(unColor){
-		if(color == "rojo" or color == "verde"){
-			return true
-		}
-		else{false}
-	}
-}*/
